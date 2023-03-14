@@ -83,17 +83,65 @@ extension StartViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.labelTable2.textColor = .gray
         
-       // cell.textLabel?.text = students[indexPath.row]
 //        cell.textLabel?.text = isFiltered ? filteredUsers[indexPath.row]
 //                                            : users[indexPath.row]
 //
-        cell.labelTable1?.text = isFiltered ? filteredUsers[indexPath.row].nameOne
-        :  users[indexPath.row].nameOne
-        //    users[indexPath.row].imageOne 
+       if isFiltered  {
+           cell.labelTable1?.text = filteredUsers[indexPath.row].nameOne
+           cell.labelTable2?.text = filteredUsers[indexPath.row].nameTwo
+           cell.imageViewtable?.image = UIImage(named: filteredUsers[indexPath.row].imageOne)
+           cell.layer.cornerRadius = 10
+           cell.layer.borderWidth = 1
+           cell.layer.borderColor = UIColor.red.cgColor
+           
+        }
+        else
+        {
+            cell.labelTable1?.text = users[indexPath.row].nameOne
+            cell.labelTable2?.text = users[indexPath.row].nameTwo
+            cell.imageViewtable?.image = UIImage(named: users[indexPath.row].imageOne)
+            cell.layer.cornerRadius = 10
+            cell.layer.borderWidth = 1
+            cell.layer.borderColor = UIColor.white.cgColor
+        }
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+       let thirthVC = ThirthViewController()
+        self.navigationController?.pushViewController(thirthVC, animated: true)
+        
+//        let viewController = StartViewController() //your start view
+//        let navigation = UINavigationController(rootViewController: viewController)
+//        let tabItem1 = UITabBarItem(title: "First VC",
+//                                    image: UIImage(systemName: "magnifyingglass"),
+//                                    selectedImage: UIImage(systemName: "magnifyingglass"))
+//
+//
+//        let secondVC = SecondViewController()
+//        let tabbar = UITabBarController()
+//        let tabItem2 = UITabBarItem(title: "Second VC",
+//                                    image: UIImage(systemName: "book"),
+//                                    selectedImage: UIImage(systemName: "book"))
+//
+//        secondVC.tabBarItem = tabItem2
+//        tabbar.viewControllers = [navigation, secondVC]
+        
+        
+        if isFiltered  {
+            thirthVC.name = "\(filteredUsers[indexPath.row].nameOne)"
+            thirthVC.imageName = filteredUsers[indexPath.row].imageOne
+        } else
+        {
+            thirthVC.name = "\(users[indexPath.row].nameOne)"
+            thirthVC.imageName = users[indexPath.row].imageOne
+        }
+    }
 }
 
 extension StartViewController: UISearchBarDelegate {
@@ -106,13 +154,12 @@ extension StartViewController: UISearchBarDelegate {
             
             // filteredStudents = students.filter { $0.contains(searchText)
           //  filteredUsers = users.filter { $0.lowercased().contains(searchText.lowercased())
-            filteredUsers = users.filter { $0.nameOne.lowercased().contains(searchText.lowercased())
-                
-            }
+            filteredUsers = users.filter { $0.nameOne.lowercased().contains(searchText.lowercased()) }
+          //  filteredUsers = users.filter { $0.imageOne }
             
         }
            tableView.reloadData()
-        // print("searchText: \(searchText)")
+        
     }
 }
 

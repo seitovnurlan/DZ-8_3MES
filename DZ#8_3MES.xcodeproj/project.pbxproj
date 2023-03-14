@@ -16,6 +16,7 @@
 		28A2067029BE15BC00F68358 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A2066E29BE15BC00F68358 /* TableViewCell.swift */; };
 		28A2067129BE15BC00F68358 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28A2066F29BE15BC00F68358 /* TableViewCell.xib */; };
 		28A2069529BF367F00F68358 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A2069429BF367F00F68358 /* User.swift */; };
+		28A2069729C0328B00F68358 /* ThirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A2069629C0328B00F68358 /* ThirthViewController.swift */; };
 		84C33DE7F12DB84EA7A0E517 /* Pods_DZ_8_3MES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A87B97B6429BAA5EF70AE733 /* Pods_DZ_8_3MES.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		28A2066E29BE15BC00F68358 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		28A2066F29BE15BC00F68358 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		28A2069429BF367F00F68358 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		28A2069629C0328B00F68358 /* ThirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirthViewController.swift; sourceTree = "<group>"; };
 		4FA9FAA44F1190C9918C8965 /* Pods-DZ#8_3MES.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DZ#8_3MES.debug.xcconfig"; path = "Target Support Files/Pods-DZ#8_3MES/Pods-DZ#8_3MES.debug.xcconfig"; sourceTree = "<group>"; };
 		A87B97B6429BAA5EF70AE733 /* Pods_DZ_8_3MES.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DZ_8_3MES.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B379EB9594D33A2141BEA1 /* Pods-DZ#8_3MES.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DZ#8_3MES.release.xcconfig"; path = "Target Support Files/Pods-DZ#8_3MES/Pods-DZ#8_3MES.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				28A2066E29BE15BC00F68358 /* TableViewCell.swift */,
 				28A2066F29BE15BC00F68358 /* TableViewCell.xib */,
 				28A2069429BF367F00F68358 /* User.swift */,
+				28A2069629C0328B00F68358 /* ThirthViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				28A2067029BE15BC00F68358 /* TableViewCell.swift in Sources */,
 				28A2066D29BDE16D00F68358 /* SecondViewController.swift in Sources */,
 				28A2069529BF367F00F68358 /* User.swift in Sources */,
+				28A2069729C0328B00F68358 /* ThirthViewController.swift in Sources */,
 				28A2065529BDE0E600F68358 /* AppDelegate.swift in Sources */,
 				28A2065729BDE0E600F68358 /* SceneDelegate.swift in Sources */,
 				28A2066B29BDE16000F68358 /* StartViewController.swift in Sources */,
