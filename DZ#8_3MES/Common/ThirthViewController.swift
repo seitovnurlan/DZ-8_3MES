@@ -54,6 +54,7 @@ class ThirthViewController: UIViewController {
         imagView.layer.cornerRadius = 50
         imagView.layer.borderWidth = 2
         imagView.layer.borderColor = UIColor.gray.cgColor
-        
+        imagView.clipsToBounds = true
+        imagView.contentMode.self = .scaleAspectFill
     }
 }

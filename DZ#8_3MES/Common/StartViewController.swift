@@ -36,6 +36,7 @@ class StartViewController: UIViewController {
         navigationItem.titleView = searchBar
         searchBar.placeholder = "Search"
         tableView.dataSource = self
+        tableView.delegate = self
         searchBar.delegate = self
         tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
     }
